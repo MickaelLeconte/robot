@@ -16,16 +16,16 @@
 #define Pin_PWM_G_AV 10
 #define Pin_PWM_G_AR 11
 #define Pin_electro 2
+#define Pin_lame 4
 #define Pin_AU A2
 #define Pin_brosse 9
+#define Pin_compresseur A4
 
 class RobotManager{
 private:
 
 public:
-	bool first_time;
 	int pwm_d,pwm_g;
-	int vitesse_brosse;
 
 	RobotManager();
 	void init();

@@ -8,21 +8,35 @@
 #include "robot.h"
 
 RobotManager::RobotManager(){
-	first_time=false;
 	pwm_d=0;
 	pwm_g=0;
-	vitesse_brosse=0;
-
 }
 
 void RobotManager::init(){
+
 	pinMode(Pin_PWM_D_AV,OUTPUT);
 	pinMode(Pin_PWM_D_AR,OUTPUT);
 	pinMode(Pin_PWM_G_AV,OUTPUT);
 	pinMode(Pin_PWM_G_AR,OUTPUT);
+
 	pinMode(Pin_AU,OUTPUT);
+	pinMode(Pin_lame,OUTPUT);
+	pinMode(Pin_brosse,OUTPUT);
+	pinMode(Pin_electro,OUTPUT);
+	pinMode(Pin_compresseur,OUTPUT);
 
 	digitalWrite(Pin_AU,0);
+	digitalWrite(Pin_lame,0);
+	digitalWrite(Pin_electro,0);
+	digitalWrite(Pin_compresseur,0);
+
+	analogWrite(Pin_brosse,0);
+
+	analogWrite(Pin_PWM_D_AV,0);
+	analogWrite(Pin_PWM_D_AR,0);
+	analogWrite(Pin_PWM_D_AV,0);
+	analogWrite(Pin_PWM_D_AR,0);
+
 }
 
 void RobotManager::stop(bool state){

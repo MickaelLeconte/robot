@@ -33,15 +33,8 @@ public:
 	void init();
 	void recvTrame();
 	bool checksum();
-
-	void reponse_set_calibration();
-	void reponse_get_calibration(int a,int b);
-	void reponse_tare_set();
-	void reponse_weight(int poids);
-	void reponse_distri_done(int dose);
-	void reponse_distri_stop(int dose);
-	void reponse_purge();
 };
+
 typedef struct {
 	int size;
 	byte buffer[MAX_TRAME_SIZE];

@@ -35,8 +35,10 @@ void BluetoothManager::recvTrame() {
 				newData = true;
 				recvInProgress = false;
 				ndx = 0;
+
 			}
 		} else if (rc == ID_ROBOT) {
+			Serial.println("ok");
 			recvInProgress = true;
 			receivedChars[ndx]=rc;
 		}
